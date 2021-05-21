@@ -1,0 +1,36 @@
+---
+title: "My New Developing Data Product Assignment"
+author: "Chiagozie-Umeano"
+date: "5/18/2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Introduction
+This Developing Data Products assignment is to design a web map with R Markdown using leaflet. This work is hosted on Github and RPubs.
+
+##Broad Street, LAGOS
+The map is designed to point to a popular street in Lagos State, Nigeria. Broad Street is in Central Business Unit in Lagos Island. The markers locates the street.
+
+
+```{r}
+library(leaflet)
+library(stringi)
+my_map <- leaflet() %>%
+  addTiles()
+my_map
+```
+
+Creating the link to Broad Street, Lagos Island, Nigeria
+```{r}
+BroadStreet <- c("https://goo.gl/maps/STjpj4VXAbbMG8568")
+leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=6.45174, lng=3.390546, popup = "Broad Street")
+```
+  
+  
+
